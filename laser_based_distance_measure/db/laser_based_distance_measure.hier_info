@@ -1,0 +1,115 @@
+|laser_based_distance_measure
+B => B.IN1
+L <= lbdm_controller:dut2.port0
+D[0] <= lbdm_datapath:dut1.port5
+D[1] <= lbdm_datapath:dut1.port5
+D[2] <= lbdm_datapath:dut1.port5
+D[3] <= lbdm_datapath:dut1.port5
+D[4] <= lbdm_datapath:dut1.port5
+D[5] <= lbdm_datapath:dut1.port5
+D[6] <= lbdm_datapath:dut1.port5
+D[7] <= lbdm_datapath:dut1.port5
+D[8] <= lbdm_datapath:dut1.port5
+D[9] <= lbdm_datapath:dut1.port5
+D[10] <= lbdm_datapath:dut1.port5
+D[11] <= lbdm_datapath:dut1.port5
+D[12] <= lbdm_datapath:dut1.port5
+D[13] <= lbdm_datapath:dut1.port5
+D[14] <= lbdm_datapath:dut1.port5
+D[15] <= lbdm_datapath:dut1.port5
+S => S.IN1
+clk => clk.IN2
+
+
+|laser_based_distance_measure|lbdm_datapath:dut1
+Dreg_clr => ~NO_FANOUT~
+Dreg_ld => ~NO_FANOUT~
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_clr => Q_count.OUTPUTSELECT
+Dctr_cnt => ~NO_FANOUT~
+clk => ~NO_FANOUT~
+Dout[0] <= <GND>
+Dout[1] <= <GND>
+Dout[2] <= <GND>
+Dout[3] <= <GND>
+Dout[4] <= <GND>
+Dout[5] <= <GND>
+Dout[6] <= <GND>
+Dout[7] <= <GND>
+Dout[8] <= <GND>
+Dout[9] <= <GND>
+Dout[10] <= <GND>
+Dout[11] <= <GND>
+Dout[12] <= <GND>
+Dout[13] <= <GND>
+Dout[14] <= <GND>
+Dout[15] <= <GND>
+
+
+|laser_based_distance_measure|lbdm_datapath:dut1|bit1_shift:dut0
+Ain[0] => ~NO_FANOUT~
+Ain[1] => Aout[0].DATAIN
+Ain[2] => Aout[1].DATAIN
+Ain[3] => Aout[2].DATAIN
+Ain[4] => Aout[3].DATAIN
+Ain[5] => Aout[4].DATAIN
+Ain[6] => Aout[5].DATAIN
+Ain[7] => Aout[6].DATAIN
+Ain[8] => Aout[7].DATAIN
+Ain[9] => Aout[8].DATAIN
+Ain[10] => Aout[9].DATAIN
+Ain[11] => Aout[10].DATAIN
+Ain[12] => Aout[11].DATAIN
+Ain[13] => Aout[12].DATAIN
+Ain[14] => Aout[13].DATAIN
+Ain[15] => Aout[14].DATAIN
+Aout[0] <= Ain[1].DB_MAX_OUTPUT_PORT_TYPE
+Aout[1] <= Ain[2].DB_MAX_OUTPUT_PORT_TYPE
+Aout[2] <= Ain[3].DB_MAX_OUTPUT_PORT_TYPE
+Aout[3] <= Ain[4].DB_MAX_OUTPUT_PORT_TYPE
+Aout[4] <= Ain[5].DB_MAX_OUTPUT_PORT_TYPE
+Aout[5] <= Ain[6].DB_MAX_OUTPUT_PORT_TYPE
+Aout[6] <= Ain[7].DB_MAX_OUTPUT_PORT_TYPE
+Aout[7] <= Ain[8].DB_MAX_OUTPUT_PORT_TYPE
+Aout[8] <= Ain[9].DB_MAX_OUTPUT_PORT_TYPE
+Aout[9] <= Ain[10].DB_MAX_OUTPUT_PORT_TYPE
+Aout[10] <= Ain[11].DB_MAX_OUTPUT_PORT_TYPE
+Aout[11] <= Ain[12].DB_MAX_OUTPUT_PORT_TYPE
+Aout[12] <= Ain[13].DB_MAX_OUTPUT_PORT_TYPE
+Aout[13] <= Ain[14].DB_MAX_OUTPUT_PORT_TYPE
+Aout[14] <= Ain[15].DB_MAX_OUTPUT_PORT_TYPE
+Aout[15] <= <GND>
+
+
+|laser_based_distance_measure|lbdm_controller:dut2
+Lc <= Lc~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Sc => Selector3.IN1
+Sc => Selector2.IN3
+Bc => Selector1.IN1
+Bc => Selector0.IN3
+clk => Dctr_cnt~reg0.CLK
+clk => Dctr_clr~reg0.CLK
+clk => Dreg_ld~reg0.CLK
+clk => Dreg_clr~reg0.CLK
+clk => Lc~reg0.CLK
+clk => state~3.DATAIN
+Dreg_clr <= Dreg_clr~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Dreg_ld <= Dreg_ld~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Dctr_clr <= Dctr_clr~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Dctr_cnt <= Dctr_cnt~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at lbdm_datapath.v(7): always construct contains both blocking and non-blocking assignments File: D:/QP_projects/laser_based_distance_measure/rtl_srcs/lbdm_datapath.v Line: 7

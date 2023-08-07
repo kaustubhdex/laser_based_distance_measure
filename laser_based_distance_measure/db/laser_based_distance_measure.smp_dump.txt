@@ -1,0 +1,8 @@
+
+State Machine - |laser_based_distance_measure|lbdm_controller:dut2|state
+Name state.S4 state.S3 state.S2 state.S1 state.S0 
+state.S0 0 0 0 0 0 
+state.S1 0 0 0 1 1 
+state.S2 0 0 1 0 1 
+state.S3 0 1 0 0 1 
+state.S4 1 0 0 0 1 
